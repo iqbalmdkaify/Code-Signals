@@ -4,4 +4,4 @@ def solution(inputString):
     temp = inputString.sort()
     map = []
     for x in inputString:
-        
+        pass
