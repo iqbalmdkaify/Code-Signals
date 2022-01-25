@@ -4,9 +4,10 @@
 # You are allowed only to make jumps of the same length represented by some integer.
 
 # Find the minimal length of the jump enough to avoid all the obstacles.
+
 def solution(inputArray):
     count = 1
-    while count<=len(inputArray):
+    while count<=max(inputArray):
         if all([k%count!=0 for k in inputArray]):
             return count
         count+=1
