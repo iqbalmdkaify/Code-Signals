@@ -1,4 +1,4 @@
-# Last night you partied a little too hard. Now there's a black and white photo of you that's about to go viral! You can't let this ruin your reputation, so you want to apply the box blur algorithm to the photo to hide its content.
+# Last night you partied a little too hard. Now there's a blaccol and white photo of you that's about to go viral! You can't let this ruin your reputation, so you want to apply the box blur algorithm to the photo to hide its content.
 
 # The pixels in the input image are represented as integers.
 # The algorithm distorts the input image in the following way:
@@ -9,12 +9,12 @@
 def solution(image):
     mat_n = []
 
-    for j in range(1, len(image)-1):
+    for row in range(1, len(image)-1):
         mat_n.append([])
-        nest = mat_n[j-1]
+        nest = mat_n[row-1]
 
-        for k in range(1, len(image[j])-1):
+        for col in range(1, len(image[row])-1):
 
-            nest.append(((image[j-1][k-1])+(image[j-1][k])+(image[j-1][k+1])+(image[j][k-1])+(image[j][k])+(image[j][k+1])+(image[j+1][k-1])+(image[j+1][k])+(image[j+1][k+1]))//9)
+            nest.append(((image[row-1][col-1])+(image[row-1][col])+(image[row-1][col+1])+(image[row][col-1])+(image[row][col])+(image[row][col+1])+(image[row+1][col-1])+(image[row+1][col])+(image[row+1][col+1]))//9)
 
     return mat_n
