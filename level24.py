@@ -28,13 +28,9 @@ def solution(matrix):
             nest.insert(k, count)
             count = 0
 
-            
-            
-
 
     return r_mat
                     
-
 
 
 
